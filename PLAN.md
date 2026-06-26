@@ -1,4 +1,4 @@
-````markdown
+
 # Top-Level Plan: MeCab-Style Japanese Morphological Analyzer
 
 ## Goal
@@ -14,11 +14,11 @@ The analyzer will use:
 - left/right context IDs
 - a connection-cost matrix
 
-```txt
+
 total_cost =
   sum(word_cost)
 + sum(connection_cost(previous.right_id, current.left_id))
-````
+
 
 ## Phase 1: Research Prototype in Python
 
@@ -154,15 +154,15 @@ Use the gold corpus and dev accuracy to refine buckets automatically.
 
 Loop:
 
-```txt
-train costs
-run Viterbi
-evaluate errors
-propose bucket splits
-propose bucket merges
-accept changes that improve score
-repeat
-```
+
+1. train costs
+2. run Viterbi
+3. evaluate errors
+4. propose bucket splits
+5. propose bucket merges
+6. accept changes that improve score
+7. repeat
+
 
 Use an objective like:
 
@@ -176,14 +176,13 @@ This prevents the model from creating too many tiny buckets.
 
 Use a backoff chain:
 
-```txt
 exact surface/entry
 → lemma + POS + conjugation form
 → full feature pattern
 → POS + subPOS
 → POS
 → unknown class
-```
+
 
 Unknown classes:
 
@@ -241,7 +240,6 @@ Optional TypeScript tools:
 
 ## Recommended Stack
 
-```txt
 Research/training:
   Python, NumPy, SciPy, scikit-learn, pandas/polars
 
@@ -253,7 +251,7 @@ Python bindings:
 
 Visualization/demo:
   TypeScript, React, D3 or canvas
-```
+
 
 ## First Milestone
 
