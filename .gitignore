@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+.impeccable/review/
+.clouds/
+public/clouds/*.staging/
+__pycache__/
+*.py[cod]
+*.blend1
+*.blend2

@@ -1,0 +1,26 @@
+@import './fonts.css';
+@import './tokens.css';
+@import './components.css';
+@import './typography.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+:root { font-family: var(--mn-font); background: var(--mn-surface); color: var(--mn-on-surface); line-height: 1.6; font-synthesis: none; scrollbar-color: var(--mn-outline) var(--mn-surface); }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button, select, input { accent-color: var(--mn-primary); }
+input, textarea { caret-color: var(--mn-primary); }
+::selection { background: var(--mn-primary-container); color: var(--mn-on-primary-container); }
+:focus-visible { outline: 3px solid var(--mn-primary); outline-offset: 4px; }
+a { color: var(--mn-primary); text-underline-offset: 0.2em; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.15; text-wrap: balance; }
+h1, h2 { font-family: var(--mn-font-display-en); font-weight: 400; }
+h1:lang(ja), h2:lang(ja) { font-family: var(--mn-font-display-ja); }
+code, pre, kbd, samp { font-family: var(--mn-font-mono); }
+h1 { font-size: var(--mn-display); letter-spacing: -0.035em; font-weight: 400; }
+h2 { font-size: var(--mn-headline); letter-spacing: -0.025em; }
+h3 { font-size: var(--mn-title); }
+p { max-width: 70ch; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

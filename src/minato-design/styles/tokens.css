@@ -1,0 +1,105 @@
+/* Exact source palette: https://coolors.co/palette/e0fbfc-c2dfe3-9db4c0-5c6b73-253237 */
+:root {
+  color-scheme: light;
+  --mn-slate-50: #e0fbfc;
+  --mn-slate-200: #c2dfe3;
+  --mn-slate-500: #9db4c0;
+  --mn-slate-700: #5c6b73;
+  --mn-slate-900: #253237;
+  --mn-tidal-500: #00b8c4;
+  --mn-tidal-100: #b6f2f4;
+  --mn-tidal-900: #004f57;
+  --mn-tertiary: var(--mn-tidal-500);
+  --mn-on-tertiary: var(--mn-slate-900);
+  --mn-primary: var(--mn-slate-900);
+  --mn-on-primary: var(--mn-slate-50);
+  --mn-primary-container: var(--mn-slate-200);
+  --mn-on-primary-container: var(--mn-slate-900);
+  --mn-secondary-container: var(--mn-slate-500);
+  --mn-on-secondary-container: var(--mn-slate-900);
+  --mn-tertiary-container: var(--mn-tidal-100);
+  --mn-on-tertiary-container: var(--mn-slate-900);
+  --mn-surface: var(--mn-slate-50);
+  --mn-surface-low: color-mix(in srgb, var(--mn-slate-50), var(--mn-slate-200) 35%);
+  --mn-surface-container: var(--mn-slate-200);
+  --mn-surface-high: var(--mn-slate-500);
+  --mn-on-surface: var(--mn-slate-900);
+  --mn-on-surface-variant: var(--mn-slate-900);
+  --mn-outline: var(--mn-slate-700);
+  --mn-outline-variant: var(--mn-slate-500);
+  --mn-error: #a52b27;
+  --mn-font-body-en: 'Source Sans 3', 'Noto Sans JP', sans-serif;
+  --mn-font-body-ja: 'Noto Sans JP', 'Source Sans 3', sans-serif;
+  --mn-font-display-en: 'Newsreader', 'Hina Mincho', serif;
+  --mn-font-display-ja: 'Hina Mincho', 'Newsreader', serif;
+  --mn-font-mono: 'Google Sans Code', 'Noto Sans JP', monospace;
+  --mn-font: var(--mn-font-body-en);
+  --mn-text-small: 0.875rem;
+  --mn-text-medium: 1rem;
+  --mn-text-large: 1.25rem;
+  --mn-weight-regular: 400;
+  --mn-weight-medium: 500;
+  --mn-weight-bold: 700;
+  --mn-space-1: 0.25rem;
+  --mn-space-2: 0.5rem;
+  --mn-space-3: 0.75rem;
+  --mn-space-4: 1rem;
+  --mn-space-6: 1.5rem;
+  --mn-space-8: 2rem;
+  --mn-space-12: 3rem;
+  --mn-space-16: 4rem;
+  --mn-radius-small: 0.5rem;
+  --mn-radius-medium: 1rem;
+  --mn-radius-large: 1.75rem;
+  --mn-radius-full: 999px;
+  --mn-display: clamp(3rem, 8vw, 4.5rem);
+  --mn-headline: clamp(2rem, 5vw, 2.5rem);
+  --mn-title: 1.25rem;
+  --mn-body: 1rem;
+  --mn-label: 0.875rem;
+  --mn-duration: 180ms;
+  --mn-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --mn-primary: var(--mn-slate-200);
+  --mn-on-primary: var(--mn-slate-900);
+  --mn-primary-container: var(--mn-slate-700);
+  --mn-on-primary-container: var(--mn-slate-50);
+  --mn-secondary-container: var(--mn-slate-500);
+  --mn-on-secondary-container: var(--mn-slate-900);
+  --mn-tertiary-container: var(--mn-tidal-900);
+  --mn-on-tertiary-container: var(--mn-tidal-100);
+  --mn-surface: #10191d;
+  --mn-surface-low: #162126;
+  --mn-surface-container: #1c292f;
+  --mn-surface-high: #28383f;
+  --mn-on-surface: var(--mn-slate-50);
+  --mn-on-surface-variant: var(--mn-slate-50);
+  --mn-outline: var(--mn-slate-500);
+  --mn-outline-variant: var(--mn-slate-700);
+  --mn-error: #ffb4ab;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --mn-primary: var(--mn-slate-200);
+    --mn-on-primary: var(--mn-slate-900);
+    --mn-primary-container: var(--mn-slate-700);
+    --mn-on-primary-container: var(--mn-slate-50);
+    --mn-secondary-container: var(--mn-slate-500);
+    --mn-on-secondary-container: var(--mn-slate-900);
+    --mn-tertiary-container: var(--mn-tidal-900);
+    --mn-on-tertiary-container: var(--mn-tidal-100);
+    --mn-surface: #10191d;
+    --mn-surface-low: #162126;
+    --mn-surface-container: #1c292f;
+    --mn-surface-high: #28383f;
+    --mn-on-surface: var(--mn-slate-50);
+    --mn-on-surface-variant: var(--mn-slate-50);
+    --mn-outline: var(--mn-slate-500);
+    --mn-outline-variant: var(--mn-slate-700);
+    --mn-error: #ffb4ab;
+  }
+}

@@ -1,0 +1,38 @@
+:root:lang(ja) { --mn-font: var(--mn-font-body-ja); }
+.mn-text {
+  --mn-text-en: var(--mn-font-body-en);
+  --mn-text-ja: var(--mn-font-body-ja);
+  font-family: var(--mn-text-en);
+  font-size: var(--mn-text-medium);
+  font-weight: var(--mn-weight-regular);
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+}
+.mn-text:lang(ja) { font-family: var(--mn-text-ja); line-height: 1.85; }
+.mn-text--size-small { font-size: var(--mn-text-small); }
+.mn-text--size-medium { font-size: var(--mn-text-medium); }
+.mn-text--size-large { font-size: var(--mn-text-large); }
+.mn-text--weight-regular { font-weight: var(--mn-weight-regular); }
+.mn-text--weight-medium { font-weight: var(--mn-weight-medium); }
+.mn-text--weight-bold { font-weight: var(--mn-weight-bold); }
+.mn-text--title, .mn-text--display {
+  --mn-text-en: var(--mn-font-display-en);
+  --mn-text-ja: var(--mn-font-display-ja);
+  font-size: var(--mn-headline);
+  font-weight: 400;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.mn-text--display { font-size: var(--mn-display); }
+.mn-text--title:lang(ja), .mn-text--display:lang(ja) { line-height: 1.5; }
+.mn-text--mono {
+  --mn-text-en: var(--mn-font-mono);
+  --mn-text-ja: var(--mn-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.mn-text--italic { font-style: italic; }
+/* Japanese has no native italic in these families; keep the requested upright style. */
+.mn-text--italic:lang(ja) { font-style: normal; }

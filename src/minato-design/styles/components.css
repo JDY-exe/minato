@@ -1,0 +1,37 @@
+.mn-button { display: inline-flex; justify-content: center; align-items: center; gap: var(--mn-space-2); border: 1px solid transparent; border-radius: var(--mn-radius-full); font-weight: 500; cursor: pointer; transition: border-radius var(--mn-duration) var(--mn-ease), background-color var(--mn-duration) var(--mn-ease); }
+.mn-button--small { min-height: 44px; padding: 0.5rem 1rem; font-size: var(--mn-label); }
+.mn-button--medium { min-height: 48px; padding: 0.65rem 1.5rem; }
+.mn-button--large { min-height: 56px; padding: 0.85rem 2rem; font-size: var(--mn-title); }
+.mn-button--filled { background: var(--mn-primary); color: var(--mn-on-primary); }
+.mn-button--tonal { background: var(--mn-secondary-container); color: var(--mn-on-secondary-container); }
+.mn-button--outlined { background: transparent; border-color: var(--mn-outline); color: var(--mn-primary); }
+.mn-button--text { background: transparent; color: var(--mn-primary); }
+.mn-button:hover:not(:disabled) { background-image: linear-gradient(currentColor, currentColor); background-blend-mode: soft-light; }
+.mn-button--filled:hover:not(:disabled) { background: color-mix(in srgb, var(--mn-primary), var(--mn-on-primary) 10%); }
+.mn-button--tonal:hover:not(:disabled), .mn-button--outlined:hover:not(:disabled), .mn-button--text:hover:not(:disabled) { background: var(--mn-primary-container); color: var(--mn-on-primary-container); }
+.mn-button:active:not(:disabled) { border-radius: var(--mn-radius-medium); }
+.mn-button:disabled { opacity: 0.45; cursor: not-allowed; }
+.mn-spinner { width: 1em; height: 1em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: mn-spin 800ms linear infinite; }
+@keyframes mn-spin { to { transform: rotate(360deg); } }
+.mn-surface { padding: var(--mn-space-8); border-radius: var(--mn-radius-large); background: var(--mn-surface-container); color: var(--mn-on-surface); }
+.mn-surface--low { background: var(--mn-surface-low); }
+.mn-surface--high { background: var(--mn-surface-high); }
+.mn-surface--primary { background: var(--mn-primary-container); color: var(--mn-on-primary-container); }
+.mn-surface--secondary { background: var(--mn-secondary-container); color: var(--mn-on-secondary-container); }
+.mn-surface--tertiary { background: var(--mn-tertiary-container); color: var(--mn-on-tertiary-container); }
+.mn-field { display: grid; gap: var(--mn-space-2); width: 100%; max-width: 28rem; }
+.mn-field label { font-weight: 500; }
+.mn-field input, .mn-theme-select select { min-height: 48px; padding: 0.65rem 1rem; background: var(--mn-surface); color: var(--mn-on-surface); border: 1px solid var(--mn-outline); border-radius: var(--mn-radius-small); max-width: 100%; }
+.mn-field input[aria-invalid='true'] { border-color: var(--mn-error); }
+.mn-field input:disabled { opacity: 0.5; cursor: not-allowed; }
+.mn-field__hint { color: var(--mn-on-surface-variant); font-size: var(--mn-label); }
+.mn-field__error { color: var(--mn-error); font-size: var(--mn-label); }
+.mn-switch { position: relative; display: inline-flex; align-items: center; gap: var(--mn-space-3); min-height: 48px; cursor: pointer; width: fit-content; }
+.mn-switch input { position: absolute; width: 52px; height: 32px; margin: 0; opacity: 0; cursor: pointer; }
+.mn-switch__track { width: 52px; height: 32px; border: 2px solid var(--mn-outline); border-radius: var(--mn-radius-full); background: var(--mn-surface-high); display: flex; align-items: center; padding: 4px; transition: background var(--mn-duration) var(--mn-ease); }
+.mn-switch__track span { width: 20px; height: 20px; border-radius: 50%; background: var(--mn-outline); transition: transform var(--mn-duration) var(--mn-ease); }
+.mn-switch input:checked + .mn-switch__track { background: var(--mn-primary); border-color: var(--mn-primary); }
+.mn-switch input:checked + .mn-switch__track span { transform: translateX(20px); background: var(--mn-on-primary); }
+.mn-switch input:focus-visible + .mn-switch__track { outline: 3px solid var(--mn-primary); outline-offset: 4px; }
+.mn-switch:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+.mn-theme-select { display: flex; align-items: center; gap: var(--mn-space-3); font-size: var(--mn-label); }
