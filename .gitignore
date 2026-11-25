@@ -6,7 +6,12 @@ dist/
 .env.*
 !.env.example
 .impeccable/review/
-.clouds/
+# Blender work stays on this PC; only the finished review exports are versioned.
+.clouds/*
+!.clouds/exports/
+.clouds/exports/*
+!.clouds/exports/cloud.mp4
+!.clouds/exports/cloud.gif
 public/clouds/*.staging/
 __pycache__/
 *.py[cod]

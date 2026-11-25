@@ -1,9 +1,0 @@
-{
-  "schemaVersion": 1,
-  "defaultSeed": 7,
-  "candidateSeeds": [7, 19, 31, 47, 61, 83, 109, 137, 163, 191, 223, 251],
-  "presets": {
-    "draft": { "width": 640, "height": 400, "frames": 32, "samples": 24, "volumeBounces": 4 },
-    "production": { "width": 1600, "height": 1000, "frames": 160, "samples": 128, "volumeBounces": 8 }
-  }
-}

@@ -2,9 +2,7 @@
 
 A personal site built with Vite, React, TypeScript, and Minato: a custom, lightweight design system inspired by [Material 3 Expressive](https://m3.material.io/).
 
-The site is **yuan.tokyo**. Current work is a procedural cloud animation in Blender; website integration is deferred. Read [HANDOFF.md](HANDOFF.md) to resume on the RTX 4070 PC. The first editable Blender scene and rendered still are in [examples/clouds](examples/clouds/).
-
-Generate a scene without rendering with `npm run clouds:scene -- --seed 7`, render a still with `npm run clouds:preview -- --seed 7`, or render the draft PNG sequence with `npm run clouds:render -- --seed 7`. Install Blender first; the scripts use its bundled Python. GPU discovery supports Metal on macOS and OptiX/CUDA on NVIDIA PCs. Full animation and Windows GPU execution still need validation.
+The site is **yuan.tokyo**. The current ten-second cloud animation is available as [MP4](.clouds/exports/cloud.mp4) and [GIF](.clouds/exports/cloud.gif). Blender sources, scripts and render caches live locally in `.clouds/` and are ignored; only those two exports are versioned. Website integration is deferred. Read [HANDOFF.md](HANDOFF.md) before continuing cloud work.
 
 ## Run
 

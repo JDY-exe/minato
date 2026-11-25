@@ -7,14 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "npm run typecheck && vite build",
     "typecheck": "tsc --noEmit",
-    "preview": "vite preview --host 127.0.0.1",
-    "clouds:setup": "node scripts/clouds/clouds.mjs setup",
-    "clouds:doctor": "node scripts/clouds/clouds.mjs doctor",
-    "clouds:scene": "node scripts/clouds/clouds.mjs scene",
-    "clouds:preview": "node scripts/clouds/clouds.mjs preview",
-    "clouds:render": "node scripts/clouds/clouds.mjs render",
-    "clouds:catalog": "node scripts/clouds/clouds.mjs catalog",
-    "clouds:pack": "node scripts/clouds/clouds.mjs pack"
+    "preview": "vite preview --host 127.0.0.1"
   },
   "engines": {
     "node": ">=22.12.0"
