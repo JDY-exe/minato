@@ -27,7 +27,7 @@ test('homepage theme label switches modes, updates its prompt and persists the p
 
 test('theme prompt uses natural typing and resets when the label closes', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'light', reducedMotion: 'no-preference' });
-  await page.route('**/clouds/manifest.json', route => route.abort());
+  await page.route('**/clouds/video.json', route => route.abort());
   await page.goto('/');
   const mode = page.getByRole('button', { name: 'Dark mode', exact: true });
   const prompt = page.locator('.home-japanese-label[data-section="Theme"]');

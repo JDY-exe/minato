@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test('homepage labels type on hover, disappear on leave, and replay on re-entry', async ({ page }) => {
-  // Avoid loading the cloud atlases; text playback still uses normal motion.
-  await page.route('**/clouds/manifest.json', route => route.abort());
+  // Avoid loading the cloud video; text playback still uses normal motion.
+  await page.route('**/clouds/video.json', route => route.abort());
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/');
   const label = page.locator('.home-japanese-label');

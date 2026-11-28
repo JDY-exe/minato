@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "clouds:prepare": "node scripts/prepare-clouds.mjs",
-    "test:clouds": "playwright test",
+    "clouds:prepare:video": "node scripts/prepare-clouds.mjs --video",
+    "test:clouds": "node --test scripts/cloud-preparation.test.mjs && playwright test",
+    "bench:clouds": "npm run build && node scripts/benchmark-cloud-video.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "npm run typecheck && vite build",
     "typecheck": "tsc --noEmit",
