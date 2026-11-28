@@ -1,12 +1,15 @@
 import { Logo } from '../../components/Logo';
 import { LogoAlt } from '../../components/LogoAlt';
 import { useState } from 'react';
-import { Button, Surface, Switch, Text, TextField } from '../../minato-design';
+import { Button, JaAnimText, Surface, Switch, Text, TextField } from '../../minato-design';
 
 export function DesignSystemPage() {
   const [checked, setChecked] = useState(true);
   const [name, setName] = useState('');
   const [saved, setSaved] = useState(false);
+  const [typing, setTyping] = useState(true);
+  const [typingRun, setTypingRun] = useState(0);
+  const [slowTyping, setSlowTyping] = useState(false);
   return <>
     <section className="page-intro"><Text as="h1" variant="display">Meet Minato.</Text><p>A small, custom design system inspired by Material 3 Expressive. Semantic colors, generous shapes, and components you can make your own.</p></section>
     <section className="specimen"><h2>yuan.tokyo</h2>
@@ -40,6 +43,20 @@ export function DesignSystemPage() {
     </div></section>
     <section className="specimen"><h2>The palette</h2><p>Tidal blue adds a vibrant tertiary accent, with softer tonal containers for each theme.</p>
       <div className="palette-strip">{['e0fbfc', 'c2dfe3', '9db4c0', '5c6b73', '253237', '00b8c4'].map((hex, index) => <div key={hex} style={{ background: `#${hex}`, color: index < 3 || index === 5 ? '#253237' : '#e0fbfc' }}><Text variant="mono" size="small">#{hex.toUpperCase()}</Text></div>)}</div>
+    </section>
+    <section className="specimen ja-anim-specimen"><h2>Japanese IME text</h2>
+      <p>Letters become kana, then commit to the supplied text. Only the active segment is underlined.</p>
+      <div className="ja-anim-specimen__preview">
+        <JaAnimText key={typingRun} as="p" variant="display" playing={typing}
+          segments={[{ text: '東', typing: 'tou' }, { text: '京', typing: 'kyou' }]}
+          timings={slowTyping ? { keystroke: 180, jitter: 35, conversionDelay: 500 } : undefined} />
+      </div>
+      <div className="component-row">
+        <Button onClick={() => setTyping(value => !value)}>{typing ? 'Reset typing' : 'Start typing'}</Button>
+        <Button variant="outlined" onClick={() => { setTyping(true); setTypingRun(value => value + 1); }}>Replay typing</Button>
+        <Switch label="Slower typing" checked={slowTyping} onChange={event => setSlowTyping(event.target.checked)} />
+      </div>
+      <pre className="ja-anim-specimen__code"><code>{`<JaAnimText\n  segments={[{ text: '東', typing: 'tou' }, { text: '京', typing: 'kyou' }]}\n  playing={playing}\n  timings={{ keystroke: 95, jitter: 30, conversionDelay: 280 }}\n/>`}</code></pre>
     </section>
     <section className="specimen"><h2>Bilingual typography</h2>
       <p>English display uses Newsreader. All five Google Fonts are self-hosted. Japanese remains upright, including when italic is requested.</p>

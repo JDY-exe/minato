@@ -123,7 +123,8 @@ component += f'      <path d="{frame}"  />\n'
 component += f'      <path d="{guides}" opacity=".7" />\n'
 component += '\n'.join(f'      <path d="{path}" />' for path in paths)
 component += '\n    </g>\n  </svg>;\n}\n'
-Path('src/components/Logo.tsx').write_text(component)
+Path('src/components/Logo').mkdir(parents=True, exist_ok=True)
+Path('src/components/Logo/index.tsx').write_text(component)
 print(f'Generated six outlined glyphs; standalone SVG is {len(svg.encode())} bytes.')
 
 # Alternate: two rows, surname 袁 above the period in the right column.
@@ -155,5 +156,6 @@ alt_component = alt_component.replace('ユアン・東京', '袁・東京')
 alt_component = alt_component.replace(frame, alt_frame).replace(guides, alt_guides)
 alt_component = alt_component.replace('\n'.join(f'      <path d="{path}" />' for path in paths),
                                       '\n'.join(f'      <path d="{path}" />' for path in alt_paths))
-Path('src/components/LogoAlt.tsx').write_text(alt_component)
+Path('src/components/LogoAlt').mkdir(parents=True, exist_ok=True)
+Path('src/components/LogoAlt/index.tsx').write_text(alt_component)
 print(f'Generated alternate four-cell surname mark; {len(alt_svg.encode())} bytes.')

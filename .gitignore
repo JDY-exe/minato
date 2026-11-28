@@ -17,3 +17,5 @@ __pycache__/
 *.py[cod]
 *.blend1
 *.blend2
+test-results/
+playwright-report/

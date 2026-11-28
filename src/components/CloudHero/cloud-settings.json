@@ -1,0 +1,22 @@
+{
+  "light": {
+    "shading": "auto",
+    "exposure": -0.01,
+    "contrast": 0.95,
+    "gamma": 1.1,
+    "density": 1.09,
+    "minimum": 0.06,
+    "pixelSize": 1,
+    "ink": "#9db4c0"
+  },
+  "dark": {
+    "shading": "auto",
+    "exposure": -0.03,
+    "contrast": 1,
+    "gamma": 0.95,
+    "density": 1,
+    "minimum": 0.2,
+    "pixelSize": 1,
+    "ink": "#5c6b73"
+  }
+}
